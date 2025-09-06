@@ -1,12 +1,12 @@
 const mqtt = require('mqtt');
 
-const broker = 'mqtt://3.111.87.2:1883';
+const broker = 'mqtt://65.0.55.1:1883';
 const options = {
   username: 'Sarayu',
   password: 'IOTteam@123'
 };
 
-const companies = ['companyone', 'companytwo', 'companythree', 'companyfour', 'companyfive', 'companysix', 'companyseven', 'companyeight', 'companynine', 'companyten', 'companyeleven', 'companytwelve'];
+const companies = ['companyone', 'companytwo', 'companythree', 'companyfour', 'companyfive', 'companysix', 'companyseven', 'companyeight', 'companynine', 'companyten',];
 
 const topics = [];
 companies.forEach(company => {
@@ -31,7 +31,7 @@ client.on('connect', () => {
         }
       });
     });
-  }, 30000);
+  }, 300000);
 });
 
 client.on('error', (err) => {
